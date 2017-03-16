@@ -24,7 +24,6 @@ payload = '{"username":"'+vra_user+'","password":"'+vra_pass+'","tenant":"'+vra_
 r = requests.post(uri, headers=headers, verify=False, data=payload)
 token = 'Bearer '+str(json.loads(r.text)["id"])
 # send the new icon to the API
-#curl  --insecure -H "Accept: application/json" -H 'Content-Type:application/json' -H "Authorization: $AUTH" --data
 uri = 'https://'+vra_ip+'/catalog-service/api/icons'
 headers = {'Accept':'application/json','Content-Type':'application/json','Authorization':token}
 payload = '{"id":"cafe_default_icon_genericAllServices","fileName":"'+filename+'","contentType":"image/png","image":"'+encoded+'"}'
