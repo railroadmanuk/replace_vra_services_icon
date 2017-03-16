@@ -12,6 +12,7 @@ vra_pass = 'VMware1!'
 vra_tenant = 'vsphere.local'
 ```
 You will need the 'requests' Python package. This can be installed using pip.
+Account used should be the System Administrator (this is always administrator@vsphere.local to my knowledge)
 ## Future enhancements
 * Writing a script to delete the custom icon, restoring the original lego brick, this is present here but does not work at this time
 
