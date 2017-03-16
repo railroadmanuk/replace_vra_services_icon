@@ -13,7 +13,7 @@ vra_tenant = 'vsphere.local'
 ```
 You will need the 'requests' Python package. This can be installed using pip.
 ## Future enhancements
-* Writing a script to delete the custom icon, restoring functionality, this is present here but does not work at this time
+* Writing a script to delete the custom icon, restoring the original lego brick, this is present here but does not work at this time
 
 ## References
 Used the following documents to create this:
