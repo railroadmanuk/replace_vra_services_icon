@@ -17,7 +17,10 @@ payload = '{"username":"'+vra_user+'","password":"'+vra_pass+'","tenant":"'+vra_
 r = requests.post(uri, headers=headers, verify=False, data=payload)
 token = 'Bearer '+str(json.loads(r.text)["id"])
 # delete the current icon
-uri = 'https://'+vra_ip+'/catalogservice/api/icons/cafe_default_icon_genericAllServices'
+uri = 'https://'+vra_ip+'/catalog-service/api/icons/cafe_default_icon_genericAllServices'
 headers = {'Authorization':token}
 r = requests.delete(uri, headers=headers, verify=False)
-print r.text
+if r.status_code == 201:
+    print "Restoration successful"
+else:
+    print "Expected return code 204, got "+r.status_code+" something went wrong"
